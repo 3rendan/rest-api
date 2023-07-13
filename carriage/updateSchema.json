@@ -1,0 +1,2059 @@
+{
+    "apiName": "carriage",
+    "nsfPath": "carriage.nsf",
+    "iconName": "mountain",
+    "icon": "Base64 stuff, preferably SVG",
+    "description": "Carriage request database",
+    "formulaEngine": "domino",
+    "schemaName": "carriage",
+    "requireRevisionToUpdate": false,
+    "allowDecryption": true,
+    "dqlAccess": true,
+    "dqlFormula": {
+        "formulaType": "domino",
+        "formula": "@True"
+    },
+    "allowCode": true,
+    "openAccess": true,
+    "forms": [
+        {
+            "formName": "Carriage",
+            "alias": [],
+            "formModes": [
+                {
+                    "modeName": "default",
+                    "validationRules": [],
+                    "readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "Status = \"\""
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+                    "onLoad": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "onSave": {
+                        "formulaType": "domino",
+                        "formula": "@SetField(\"Status\";\"Active\")"
+                    },
+                    "computeWithForm": false,
+                    "required": [],
+                    "fields": [
+                        {
+                            "name": "Period",
+                            "fieldAccess": "RW",
+                            "externalName": "Period",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "ProgramID",
+                            "fieldAccess": "RW",
+                            "externalName": "ProgramID",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterEmail",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterEmail",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterName",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterName",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterPhone",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterPhone",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterTitle",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterTitle",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "StartDate",
+                            "fieldAccess": "RW",
+                            "externalName": "StartDate",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "status",
+                            "fieldAccess": "RO",
+                            "externalName": "status",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ],
+                    "readAccessFields": [
+                        {
+                            "name": "Period",
+                            "fieldAccess": "RW",
+                            "externalName": "Period",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "ProgramID",
+                            "fieldAccess": "RW",
+                            "externalName": "ProgramID",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterEmail",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterEmail",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterName",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterName",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterPhone",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterPhone",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterTitle",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterTitle",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "StartDate",
+                            "fieldAccess": "RW",
+                            "externalName": "StartDate",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "status",
+                            "fieldAccess": "RO",
+                            "externalName": "status",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ],
+                    "writeAccessFields": [
+                        {
+                            "name": "Period",
+                            "fieldAccess": "RW",
+                            "externalName": "Period",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "ProgramID",
+                            "fieldAccess": "RW",
+                            "externalName": "ProgramID",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterEmail",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterEmail",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterName",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterName",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterPhone",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterPhone",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterTitle",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterTitle",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "StartDate",
+                            "fieldAccess": "RW",
+                            "externalName": "StartDate",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ]
+                },
+                {
+                    "modeName": "update",
+                    "validationRules": [],
+                    "readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "Status = \"\""
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "Status = \"Inactive\""
+                    },
+                    "onLoad": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "onSave": {
+                        "formulaType": "domino",
+                        "formula": "@SetField(\"Status\";\"Active\")"
+                    },
+                    "computeWithForm": false,
+                    "required": [],
+                    "fields": [
+                        {
+                            "name": "Period",
+                            "fieldAccess": "RW",
+                            "externalName": "Period",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "ProgramID",
+                            "fieldAccess": "RW",
+                            "externalName": "ProgramID",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterEmail",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterEmail",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterName",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterName",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterPhone",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterPhone",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterTitle",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterTitle",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "StartDate",
+                            "fieldAccess": "RW",
+                            "externalName": "StartDate",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "status",
+                            "fieldAccess": "RO",
+                            "externalName": "status",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ],
+                    "readAccessFields": [
+                        {
+                            "name": "Period",
+                            "fieldAccess": "RW",
+                            "externalName": "Period",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "ProgramID",
+                            "fieldAccess": "RW",
+                            "externalName": "ProgramID",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterEmail",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterEmail",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterName",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterName",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterPhone",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterPhone",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterTitle",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterTitle",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "StartDate",
+                            "fieldAccess": "RW",
+                            "externalName": "StartDate",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "status",
+                            "fieldAccess": "RO",
+                            "externalName": "status",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ],
+                    "writeAccessFields": [
+                        {
+                            "name": "Period",
+                            "fieldAccess": "RW",
+                            "externalName": "Period",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "ProgramID",
+                            "fieldAccess": "RW",
+                            "externalName": "ProgramID",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterEmail",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterEmail",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterName",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterName",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterPhone",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterPhone",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "RequesterTitle",
+                            "fieldAccess": "RW",
+                            "externalName": "RequesterTitle",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "StartDate",
+                            "fieldAccess": "RW",
+                            "externalName": "StartDate",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "formName": "Marketing",
+            "alias": [],
+            "formModes": [
+                {
+                    "modeName": "default",
+                    "validationRules": [],
+                    "readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+                    "onLoad": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "onSave": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "computeWithForm": false,
+                    "required": [],
+                    "fields": [
+                        {
+                            "name": "Assets",
+                            "fieldAccess": "RW",
+                            "externalName": "Assets",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Country",
+                            "fieldAccess": "RW",
+                            "externalName": "Country",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "email",
+                            "fieldAccess": "RW",
+                            "externalName": "email",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Form",
+                            "fieldAccess": "RO",
+                            "externalName": "Form",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "FullName",
+                            "fieldAccess": "RW",
+                            "externalName": "FullName",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "gender",
+                            "fieldAccess": "WO",
+                            "externalName": "gender",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Industry",
+                            "fieldAccess": "RW",
+                            "externalName": "Industry",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Newsletter",
+                            "fieldAccess": "RW",
+                            "externalName": "Newsletter",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ],
+                    "readAccessFields": [
+                        {
+                            "name": "Assets",
+                            "fieldAccess": "RW",
+                            "externalName": "Assets",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Country",
+                            "fieldAccess": "RW",
+                            "externalName": "Country",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "email",
+                            "fieldAccess": "RW",
+                            "externalName": "email",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Form",
+                            "fieldAccess": "RO",
+                            "externalName": "Form",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "FullName",
+                            "fieldAccess": "RW",
+                            "externalName": "FullName",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Industry",
+                            "fieldAccess": "RW",
+                            "externalName": "Industry",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Newsletter",
+                            "fieldAccess": "RW",
+                            "externalName": "Newsletter",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ],
+                    "writeAccessFields": [
+                        {
+                            "name": "Assets",
+                            "fieldAccess": "RW",
+                            "externalName": "Assets",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Country",
+                            "fieldAccess": "RW",
+                            "externalName": "Country",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "email",
+                            "fieldAccess": "RW",
+                            "externalName": "email",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "FullName",
+                            "fieldAccess": "RW",
+                            "externalName": "FullName",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "gender",
+                            "fieldAccess": "WO",
+                            "externalName": "gender",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Industry",
+                            "fieldAccess": "RW",
+                            "externalName": "Industry",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Newsletter",
+                            "fieldAccess": "RW",
+                            "externalName": "Newsletter",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "formName": "SampleForm",
+            "alias": [],
+            "formModes": [
+                {
+                    "modeName": "default",
+                    "validationRules": [],
+                    "readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+                    "onLoad": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "onSave": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "computeWithForm": false,
+                    "required": [],
+                    "fields": [
+                        {
+                            "name": "Color",
+                            "fieldAccess": "RW",
+                            "externalName": "Color",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Form",
+                            "fieldAccess": "RW",
+                            "externalName": "Form",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Shape",
+                            "fieldAccess": "RW",
+                            "externalName": "Shape",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Taste",
+                            "fieldAccess": "RW",
+                            "externalName": "Taste",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ],
+                    "readAccessFields": [
+                        {
+                            "name": "Color",
+                            "fieldAccess": "RW",
+                            "externalName": "Color",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Form",
+                            "fieldAccess": "RW",
+                            "externalName": "Form",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Shape",
+                            "fieldAccess": "RW",
+                            "externalName": "Shape",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Taste",
+                            "fieldAccess": "RW",
+                            "externalName": "Taste",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ],
+                    "writeAccessFields": [
+                        {
+                            "name": "Color",
+                            "fieldAccess": "RW",
+                            "externalName": "Color",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Form",
+                            "fieldAccess": "RW",
+                            "externalName": "Form",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Shape",
+                            "fieldAccess": "RW",
+                            "externalName": "Shape",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Taste",
+                            "fieldAccess": "RW",
+                            "externalName": "Taste",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ]
+                },
+                {
+                    "modeName": "odata",
+                    "validationRules": [],
+                    "readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+                    "onLoad": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "onSave": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "computeWithForm": false,
+                    "required": [],
+                    "fields": [
+                        {
+                            "name": "Color",
+                            "fieldAccess": "RW",
+                            "externalName": "Color",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Form",
+                            "fieldAccess": "RW",
+                            "externalName": "Form",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Shape",
+                            "fieldAccess": "RW",
+                            "externalName": "Shape",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Taste",
+                            "fieldAccess": "RW",
+                            "externalName": "Taste",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ],
+                    "readAccessFields": [
+                        {
+                            "name": "Color",
+                            "fieldAccess": "RW",
+                            "externalName": "Color",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Form",
+                            "fieldAccess": "RW",
+                            "externalName": "Form",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Shape",
+                            "fieldAccess": "RW",
+                            "externalName": "Shape",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Taste",
+                            "fieldAccess": "RW",
+                            "externalName": "Taste",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ],
+                    "writeAccessFields": [
+                        {
+                            "name": "Color",
+                            "fieldAccess": "RW",
+                            "externalName": "Color",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Form",
+                            "fieldAccess": "RW",
+                            "externalName": "Form",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Shape",
+                            "fieldAccess": "RW",
+                            "externalName": "Shape",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Taste",
+                            "fieldAccess": "RW",
+                            "externalName": "Taste",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "formName": "TestForm",
+            "alias": [],
+            "formModes": [
+                {
+                    "modeName": "default",
+                    "validationRules": [],
+                    "readAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "writeAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@True"
+                    },
+                    "deleteAccessFormula": {
+                        "formulaType": "domino",
+                        "formula": "@False"
+                    },
+                    "onLoad": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "onSave": {
+                        "formulaType": "domino",
+                        "formula": ""
+                    },
+                    "computeWithForm": false,
+                    "required": [],
+                    "fields": [
+                        {
+                            "name": "colour",
+                            "fieldAccess": "RO",
+                            "externalName": "colour",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Form",
+                            "fieldAccess": "RO",
+                            "externalName": "Form",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "name",
+                            "fieldAccess": "RW",
+                            "externalName": "name",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ],
+                    "readAccessFields": [
+                        {
+                            "name": "colour",
+                            "fieldAccess": "RO",
+                            "externalName": "colour",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "Form",
+                            "fieldAccess": "RO",
+                            "externalName": "Form",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        },
+                        {
+                            "name": "name",
+                            "fieldAccess": "RW",
+                            "externalName": "name",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ],
+                    "writeAccessFields": [
+                        {
+                            "name": "name",
+                            "fieldAccess": "RW",
+                            "externalName": "name",
+                            "type": "string",
+                            "format": "string",
+                            "minitems": -1,
+                            "uniqueitems": false,
+                            "minimum": 0.0,
+                            "maximum": 0.0,
+                            "exclusiveMinimum": -1.0,
+                            "minLenght": -1,
+                            "maxLength": -1,
+                            "itemFlags": [
+                                "SUMMARY"
+                            ],
+                            "summaryField": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "views": [
+        {
+            "name": "($All)",
+            "alias": [],
+            "unid": "0E35D520A1EBBB5B48258435003E8284"
+        },
+        {
+            "name": "Active Requests",
+            "alias": [],
+            "unid": "070F7E740D2629EA852589EA00629D40"
+        },
+        {
+            "name": "Carriages",
+            "alias": [],
+            "unid": "86C72C1BF64B6DF04825847100373215"
+        },
+        {
+            "name": "Carriages",
+            "alias": [],
+            "unid": "E29F51E6CEB8D30A852589EA0056A402"
+        },
+        {
+            "name": "ChineseCarriages",
+            "alias": [],
+            "unid": "3FE5CD63E179F21600258680006DB25B"
+        },
+        {
+            "name": "MarketingInfo",
+            "alias": [],
+            "unid": "10EA9EC66EA748BC4825851100420810"
+        },
+        {
+            "name": "Samples",
+            "alias": [],
+            "unid": "5318911D496571410025860D00544B17"
+        }
+    ],
+    "agents": [],
+    "available": true,
+    "isActive": true,
+    "prohibitRefresh": true
+}

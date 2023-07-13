@@ -1,0 +1,11 @@
+ {
+   "apiName": "carriage",
+   "createSchema": false,
+   "description": "A database for carriage service requests",
+   "icon": "Base64 stuff, preferably SVG",
+   "iconName": "beach",
+   "isActive": true,
+   "nsfPath": "carriage.nsf",
+   "schemaName": "carriage-service",
+   "server": "*" 
+ }

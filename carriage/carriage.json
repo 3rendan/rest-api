@@ -1,0 +1,369 @@
+{
+  "@unid": "6334EDA70A42ABB948258846002F115C",
+  "agents": [],
+  "allowCode": true,
+  "allowDecryption": true,
+  "apiName": "carriage",
+  "description": "Carriage request database",
+  "dqlAccess": true,
+  "dqlFormula": {
+    "formula": "@True",
+    "formulaType": "domino"
+  },
+  "formAliases": {
+    "Carriage": "Carriage",
+    "Entry": "Entry",
+    "IdPConfig": "IdP Configuration",
+    "OdataSampleForm": "OdataSampleForm",
+    "SampleEntry": "SampleEntry",
+    "TestForm": "TestForm"
+  },
+  "forms": [
+    {
+      "formModes": [
+        {
+          "computeWithForm": false,
+          "deleteAccessFormula": {
+            "formula": "@False",
+            "formulaType": "domino"
+          },
+          "fields": [
+            {
+              "format": "authors",
+              "name": "Owner",
+              "type": "string"
+            },
+            {
+              "format": "richtext",
+              "name": "Body",
+              "type": "object"
+            },
+            {
+              "items": {
+                "type": "string"
+              },
+              "name": "hobbies",
+              "type": "array"
+            },
+            {
+              "name": "Form",
+              "readOnly": true,
+              "type": "string"
+            },
+            {
+              "name": "Pet",
+              "type": "string"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "email",
+              "type": "string"
+            },
+            {
+              "name": "employee_count",
+              "type": "integer"
+            },
+            {
+              "name": "first_name",
+              "type": "string"
+            },
+            {
+              "name": "last_name",
+              "type": "string"
+            }
+          ],
+          "modeName": "default",
+          "readAccessFormula": {
+            "formula": "@True",
+            "formulaType": "domino"
+          },
+          "required": [
+            "Form",
+            "email",
+            "first_name"
+          ],
+          "writeAccessFormula": {
+            "formula": "@True",
+            "formulaType": "domino"
+          }
+        },
+        {
+          "computeWithForm": false,
+          "deleteAccessFormula": {
+            "formula": "@False",
+            "formulaType": "domino"
+          },
+          "fields": [
+            {
+              "name": "Form",
+              "readOnly": true,
+              "type": "string"
+            },
+            {
+              "name": "ProgramID",
+              "type": "string"
+            },
+            {
+              "name": "RequesterName",
+              "type": "string"
+            },
+            {
+              "name": "RequesterTitle",
+              "type": "string"
+            },
+            {
+              "name": "RequesterPhone",
+              "type": "string"
+            },
+            {
+              "name": "RequesterEmail",
+              "type": "string"
+            },
+            {
+              "name": "Period",
+              "type": "string"
+            },
+            {
+              "name": "StartDate",
+              "type": "string"
+            }
+          ],
+          "modeName": "dql",
+          "readAccessFormula": {
+            "formula": "@True",
+            "formulaType": "domino"
+          },
+          "required": [
+            "ProgramID",
+            "RequesterName",
+            "RequesterTitle",
+            "RequesterPhone",
+            "RequesterEmail",
+            "Period",
+            "StartDate"
+          ],
+          "writeAccessFormula": {
+            "formula": "@True",
+            "formulaType": "domino"
+          }
+        }
+      ],
+      "formName": "Carriage"
+    },
+    {
+      "formModes": [
+        {
+          "computeWithForm": false,
+          "deleteAccessFormula": {
+            "formula": "@False",
+            "formulaType": "domino"
+          },
+          "fields": [
+            {
+              "name": "Assets",
+              "type": "string"
+            },
+            {
+              "name": "Country",
+              "type": "string"
+            },
+            {
+              "name": "Form",
+              "readOnly": true,
+              "type": "string"
+            },
+            {
+              "name": "FullName",
+              "type": "string"
+            },
+            {
+              "name": "Industry",
+              "type": "string"
+            },
+            {
+              "name": "Newsletter",
+              "type": "string"
+            },
+            {
+              "name": "email",
+              "type": "string"
+            },
+            {
+              "name": "gender",
+              "type": "string",
+              "writeOnly": true
+            }
+          ],
+          "modeName": "default",
+          "readAccessFormula": {
+            "formula": "@True",
+            "formulaType": "domino"
+          },
+          "writeAccessFormula": {
+            "formula": "@True",
+            "formulaType": "domino"
+          }
+        }
+      ],
+      "formName": "Marketing"
+    },
+    {
+      "formModes": [
+        {
+          "computeWithForm": false,
+          "deleteAccessFormula": {
+            "formula": "@False",
+            "formulaType": "domino"
+          },
+          "fields": [
+            {
+              "name": "Color",
+              "type": "string"
+            },
+            {
+              "name": "Form",
+              "type": "string"
+            },
+            {
+              "name": "Shape",
+              "type": "string"
+            },
+            {
+              "name": "Taste",
+              "type": "string"
+            }
+          ],
+          "modeName": "default",
+          "readAccessFormula": {
+            "formula": "@True",
+            "formulaType": "domino"
+          },
+          "writeAccessFormula": {
+            "formula": "@True",
+            "formulaType": "domino"
+          }
+        },
+        {
+          "computeWithForm": false,
+          "deleteAccessFormula": {
+            "formula": "@False",
+            "formulaType": "domino"
+          },
+          "fields": [
+            {
+              "name": "Color",
+              "type": "string"
+            },
+            {
+              "name": "Form",
+              "type": "string"
+            },
+            {
+              "name": "Shape",
+              "type": "string"
+            },
+            {
+              "name": "Taste",
+              "type": "string"
+            }
+          ],
+          "modeName": "odata",
+          "readAccessFormula": {
+            "formula": "@True",
+            "formulaType": "domino"
+          },
+          "writeAccessFormula": {
+            "formula": "@True",
+            "formulaType": "domino"
+          }
+        }
+      ],
+      "formName": "SampleForm"
+    },
+    {
+      "formModes": [
+        {
+          "computeWithForm": false,
+          "deleteAccessFormula": {
+            "formula": "@False",
+            "formulaType": "domino"
+          },
+          "fields": [
+            {
+              "name": "Form",
+              "readOnly": true,
+              "type": "string"
+            },
+            {
+              "name": "colour",
+              "readOnly": true,
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            }
+          ],
+          "modeName": "default",
+          "readAccessFormula": {
+            "formula": "@True",
+            "formulaType": "domino"
+          },
+          "writeAccessFormula": {
+            "formula": "@True",
+            "formulaType": "domino"
+          }
+        }
+      ],
+      "formName": "TestForm"
+    }
+  ],
+  "formulaEngine": "domino",
+  "icon": "Base64 stuff, preferably SVG",
+  "iconName": "mountain",
+  "isActive": true,
+  "nsfPath": "Carriage.nsf",
+  "openAccess": true,
+  "requireRevisionToUpdate": false,
+  "schemaName": "carriage-service",
+  "views": [
+    {
+      "alias": [
+        "($All)"
+      ],
+      "name": "($All)",
+      "unid": "0E35D520A1EBBB5B48258435003E8284"
+    },
+    {
+      "alias": [
+        "ChineseCarriages"
+      ],
+      "name": "ChineseCarriages",
+      "unid": "3FE5CD63E179F21600258680006DB25B"
+    },
+    {
+      "alias": [
+        "Carriages"
+      ],
+      "name": "Carriages",
+      "unid": "86C72C1BF64B6DF04825847100373215"
+    },
+    {
+      "alias": [
+        "MarketingInfo"
+      ],
+      "name": "MarketingInfo",
+      "unid": "10EA9EC66EA748BC4825851100420810"
+    },
+    {
+      "alias": [
+        "Samples"
+      ],
+      "name": "Samples",
+      "unid": "5318911D496571410025860D00544B17"
+    }
+  ]
+}

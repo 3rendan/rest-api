@@ -1,0 +1,20 @@
+ {
+     "name": "Active Requests",
+     "selectionFormula": "Form = \"Carriage\" & \"status\" = \"Active\"",
+     "columns": [
+         {
+             "name": "RequesterName",
+             "title": "RequesterName",
+             "separatemultiplevalues": false,
+             "sort": "ascending",
+             "formula": "RequesterName"
+         },
+         {
+             "name": "StartDate",
+             "title": "StartDate",
+             "separatemultiplevalues": false,
+             "sort": "ascending",
+             "formula": "StartDate"
+         }
+     ]
+ }

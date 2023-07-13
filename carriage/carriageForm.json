@@ -1,0 +1,46 @@
+ {
+     "name": "Carriage",
+     "alias": "",
+     "fields": [
+         {
+             "name": "ProgramID",
+             "type": "text",
+             "allowmultivalues": false
+         },
+         {
+             "name": "RequesterName",
+             "type": "text",
+             "allowmultivalues": false
+         },
+         {
+             "name": "RequesterTitle",
+             "type": "text",
+             "allowmultivalues": false
+         },
+         {
+             "name": "RequesterPhone",
+             "type": "text",
+             "allowmultivalues": false
+         },
+         {
+             "name": "RequesterEmail",
+             "type": "text",
+             "allowmultivalues": false
+         },
+         {
+             "name": "Period",
+             "type": "text",
+             "allowmultivalues": false
+         },
+         {
+             "name": "StartDate",
+             "type": "text",
+             "allowmultivalues": false
+         },
+         {
+             "name": "status",
+             "type": "text",
+             "allowmultivalues": false
+         }
+     ]
+ }

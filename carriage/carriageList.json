@@ -1,0 +1,48 @@
+ {
+     "name": "Carriages",
+     "selectionFormula": "Form = \"Carriage\"",
+     "columns": [
+         {
+             "name": "RequesterName",
+             "title": "RequesterName",
+             "separatemultiplevalues": false,
+             "sort": "ascending",
+             "formula": "RequesterName"
+         },
+         {
+             "name": "RequesterTitle",
+             "title": "RequesterTitle",
+             "separatemultiplevalues": false,
+             "sort": "ascending",
+             "formula": "RequesterTitle"
+         },
+         {
+             "name": "RequesterEmail",
+             "title": "Email",
+             "separatemultiplevalues": false,
+             "sort": "ascending",
+             "formula": "RequesterEmail"
+         },
+         {
+             "name": "RequesterPhone",
+             "title": "Phone",
+             "separatemultiplevalues": false,
+             "sort": "ascending",
+             "formula": "RequesterPhone"
+         },
+         {
+             "name": "Period",
+             "title": "Period",
+             "separatemultiplevalues": false,
+             "sort": "ascending",
+             "formula": "Period"
+         },
+         {
+             "name": "StartDate",
+             "title": "StartDate",
+             "separatemultiplevalues": false,
+             "sort": "ascending",
+             "formula": "StartDate"
+         }
+     ]
+ }
